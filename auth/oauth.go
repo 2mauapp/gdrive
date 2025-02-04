@@ -87,7 +87,8 @@ func getConfig(clientId, clientSecret string) *oauth2.Config {
 		ClientID:     clientId,
 		ClientSecret: clientSecret,
 		Scopes:       []string{"https://www.googleapis.com/auth/drive"},
-		RedirectURL:  "urn:ietf:wg:oauth:2.0:oob",
+		// RedirectURL:  "urn:ietf:wg:oauth:2.0:oob",
+		RedirectURL:  "http://localhost:8080",
 		Endpoint: oauth2.Endpoint{
 			AuthURL:  "https://accounts.google.com/o/oauth2/auth",
 			TokenURL: "https://accounts.google.com/o/oauth2/token",
